@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(135deg, #0a0a0a, #1a001a, #330000);
+  background-size: 400% 400%;
+  animation: bgShift 20s ease infinite;
+  color: #ddd;
+  overflow-x: hidden;
+}
+
+@keyframes bgShift {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 3rem;
+  color: #8b0000;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 1rem;
+}
+
+#clock {
+  font-size: 1.3rem;
+  color: #b22222;
+  margin-top: 1rem;
+}
+
+section {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+section h2 {
+  font-family: 'UnifrakturCook', cursive;
+  color: #8b0000;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.message-box {
+  background-color: rgba(20, 20, 20, 0.8);
+  border: 2px solid #8b0000;
+  padding: 2rem;
+  border-radius: 15px;
+  min-height: 200px;
+  color: white;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.playlist {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.playlist a {
+  padding: 0.8rem 2rem;
+  background-color: #2f0f15;
+  color: #f08080;
+  text-decoration: none;
+  border: 2px solid #8b0000;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.playlist a:hover {
+  transform: scale(1.05);
+  background-color: #550000;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery div {
+  border: 2px solid #660000;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.9);
+}
+
+.cta-button {
+  display: block;
+  margin: 3rem auto;
+  background-color: #8b0000;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.3s;
+  width: fit-content;
+}
+
+.cta-button:hover {
+  background-color: #4d0000;
+}
+
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ff4d4d;
+  transform: rotate(45deg);
+  animation: float 6s linear infinite;
+  opacity: 0.5;
+}
+
+.heart::before, .heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ff4d4d;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  left: -10px;
+  top: 0;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh) rotate(45deg); }
+  100% { transform: translateY(-10vh) rotate(45deg); }
+}
+
+
+
+
+
+
+/* Estilização do carrossel */
+.swiper-container { 
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  border: 2px solid #660000;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  position: relative; /* Necessário para posicionar os botões corretamente */
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide img,
+.swiper-slide video {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Botões de navegação */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ff4d4d;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Botão da esquerda */
+.swiper-button-prev {
+  left: 10px;
+}
+
+/* Botão da direita */
+.swiper-button-next {
+  right: 10px;
+}
+
+/* Indicadores de página (bolinhas) */
+.swiper-pagination-bullet {
+  background: #ff4d4d;
+  opacity: 0.8;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ff6666;
+}
+
+
+/* Estilização do relógio */
+#clock {
+  font-size: 1.4rem;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid #8b0000;
+  border-radius: 12px;
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: rgba(139, 0, 0, 0.2);
+  box-shadow: 0 0 10px #8b0000;
+  font-family: 'Great Vibes', cursive;
+}
