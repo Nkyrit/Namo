@@ -7,51 +7,119 @@
   <title>Para o Meu Amor, Nicole</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="eu&vc.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
+
 <body>
-  <div class="hearts"></div>
-
-  <header>
+    <header>
     <h1>Para o Meu Amor, Nicole ❤️</h1>
-    <p>Se eu pudesse te mostrar o quanto você é importante pra mim... criei isso pra tentar.</p>
+    <p>Se eu pudesse te mostrar o quanto você é importante pra mim... Criei isso pra tentar.</p>
     <div id="clock"></div>
-  </header>
 
-  <section>
-    <h2>Só pra você</h2>
-    <div class="message-box">
-      <!-- Aqui você vai escrever sua mensagem depois -->
-      <em>(Sua mensagem vai aqui. Escreva com o coração quando estiver pronto.)</em>
-    </div>
-  </section>
-
-  <section class="playlist">
+    <section class="playlist">
     <a href="https://open.spotify.com/playlist/5qNGJcsUgwaKnbfpDTnWzy?si=61b39c07e1264f5f" id="playlistMinha" target="_blank">🎧 Minha playlist pra você</a>
     <a href="https://open.spotify.com/playlist/2F4sc8I47LHpcBxH0rap3Y?si=7354f79015e04f69" id="playlistDela" target="_blank">💌 Aquela que você fez pra mim</a>
   </section>
 
+  </header>
 <section>
   <h2>Nossas memórias</h2>
   <div class="swiper-container">
     <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="image/o nosso inicio.jpg" alt="Foto 0"></div>
       <div class="swiper-slide"><img src="image/NosLindos.jpg" alt="Foto 1"></div>
-      <div class="swiper-slide"><img src="image/video gilete.mp4" alt="Foto 2"></div>
-      <div class="swiper-slide"><img src="image/foto3.jpg" alt="Foto 3"></div>
-      <div class="swiper-slide"><img src="image/foto4.jpg" alt="Foto 4"></div>
-      <div class="swiper-slide"><video src="image/video1.mp4" controls></video></div>
+      <div class="swiper-slide"><video src="image/video de nois viajando.mp4" controls></video></div>
+      <div class="swiper-slide"><img src="image/NossosZoiosLindos.jpg" alt="Foto 3"></div>
+      <div class="swiper-slide"><video src="image/nois deitado.mp4" controls></video></div>
+      <div class="swiper-slide"><img src="image/foto 1 favorita.jpg" alt="Foto 4"></div>
+      <div class="swiper-slide"><img src="image/foto 2 favorita.jpg" alt="Foto 5"></div>
     </div>
-    
-    <!-- Botões de navegação -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-    
-    <!-- Paginação opcional -->
+
+    <!-- CORRETO: Fora do swiper-wrapper -->
     <div class="swiper-pagination"></div>
+    <style>
+    .swiper-pagination-bullet {
+          background-color: rgba(255, 255, 255, 0.4); /* branco translúcido */
+          width: 8px;
+          height: 8px;
+          margin: 0 6px;
+          border-radius: 50%;
+          opacity: 1; /* importante para manter visibilidade */
+          transition: background-color 0.3s;
+        }
+
+    .swiper-pagination-bullet-active {
+        background-color: #ff4d4d; /* vermelho vivo */
+}
+    </style>
+
+    <!-- Mensagem -->
+    <div id="slide-message" class="slide-message">O nosso início!</div>
   </div>
 </section>
 
-  <a href="#" class="cta-button">Se você ainda acredita no nosso amor... clica aqui 💖</a>
+  <div class="hearts"></div>
+
+  <section>
+    <button class="carta-btn" onclick="abrirCarta()">Eu te amo ❤️</button>
+    <div class="message-box" id="carta" style="display: none;">
+     <div class="carta-namorados">
+  <em>
+    
+
+    <p>
+      Isso é tão difícil… porque é complicado tentar colocar em palavras o quanto você significa pra mim.  
+      Mas pra começar: <strong>EU TE AMO MUITO</strong> & <strong>FELIZ DIA DOS NAMORADOS!</strong> 💕<br>
+    </p>
+
+    <p>
+      Nos últimos dias, estive pensando muito. Pensando na gente, nas nossas conversas, nos momentos bons, 
+      e também nos difíceis. E antes de qualquer coisa, eu preciso te pedir <strong>desculpa</strong>.  
+      Por aquele dia, pela festa, pelas palavras que machucaram, por não ter te acolhido como você merecia.  
+      Sei que errei, e reconhecer isso não muda o passado, mas eu espero que mostre o quanto eu me importo.
+    </p>
+
+    <p>
+      Você é a mulher com quem eu quero dividir o meu futuro.  
+      E quando digo isso, não é só nos dias bons.  
+      Eu quero estar do seu lado nas dificuldades, nas incertezas, nas fases confusas — em tudo.  
+      Porque a verdade é que <strong>não importa o que aconteça, eu escolho você</strong>. Sempre.
+    </p>
+    
+    <p>
+      Eu não tô aqui por conveniência.  
+      Tô com você porque eu <strong>te amo de verdade</strong>.  
+      Me desculpa de novo e foda-se sexo, ou qualquer superficialidade… <strong>eu só quero você</strong>.
+    </p>
+
+    <p>
+      Quero voltar a fazer seus olhos brilharem como antes.  
+      Quero que você sinta de novo aquele brilho de novo,  igual a vez que olhei meu celular e tinha <strong>35 mensagens no meio da tarde</strong>.  
+      Quero te lembrar do quanto você é especial pra mim.
+    </p>
+    
+
+    <div class="mensagens-antigas">
+      <img src="/image/antigamente....png" alt="Print das 35 mensagens de antigamente">
+    </div>
+
+    <p>
+      Eu amo o som da sua risada, o jeito que você fala meu nome, eu vejo tudo isso e me apaixono de novo.  
+      Você é linda em todos os sentidos. Forte, sensível, inteligente, engraçada.  
+      E eu tenho sorte. Muita sorte. Por ter você aqui.
+    </p>
+
+    <p>
+      <strong>Eu te amo. Com tudo o que sou.</strong><br>
+      Não desiste da gente, meu amor.  
+      Ainda tem tanta coisa linda que a gente pode viver juntos. 💖
+    </p>
+  </em>
+</div>
+
+    </div>
+  </section>
 
   <script src="eu&vc.js"></script>
 </body>

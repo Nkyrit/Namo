@@ -1,4 +1,3 @@
-// Relógio desde 19/nov/2023
 function updateClock() {
   const startDate = new Date('2023-11-19T00:00:00');
   const now = new Date();
@@ -14,7 +13,6 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
-// Corações animados
 const hearts = document.querySelector(".hearts");
 setInterval(() => {
   const heart = document.createElement("div");
@@ -29,10 +27,35 @@ setInterval(() => {
 
 // Carrossel
 document.addEventListener("DOMContentLoaded", function () {
-  new Swiper('.swiper-container', {
+  const messages = [
+    "Foi assim que a gente começou",
+    "O aniversário que comemorei com você!",
+    "Nossa primeira 'viagem' ",
+    "De olho no cê",
+    "Um dos dias com você no seu quarto",
+    "E essa... é a minha foto favorita da mulher mais linda que eu já vi na vida 😳❤️",
+    "Não decidi se a favorita era essa ou a outra 😅 você ser tão linda confunde a cabeça",
+  ];
+
+  const messageBox = document.getElementById("slide-message");
+
+  const swiper = new Swiper('.swiper-container', {
     loop: true,
-    pagination: { el: '.swiper-pagination', clickable: true },
-    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
     spaceBetween: 30,
+    on: {
+      slideChange: function () {
+        const index = this.realIndex;
+        messageBox.textContent = messages[index] || "";
+      }
+    }
   });
 });
+
+function abrirCarta() {
+    const carta = document.getElementById("carta");
+    carta.style.display = (carta.style.display === "none") ? "block" : "none";
+  }
