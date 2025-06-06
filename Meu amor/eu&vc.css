@@ -334,3 +334,10 @@ section h2 {
   background-color: #550000;
 }
 
+.mensagens-antigas img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 1rem auto;
+}
